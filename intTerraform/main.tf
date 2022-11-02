@@ -1,5 +1,5 @@
-variable "aws_access_key" {AKIAW34TF7FCFRJSVB6C}
-variable "aws_secret_key" {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}
+variable "aws_access_key" {AKIAW34TF7FCDIXICCFT}
+variable "aws_secret_key" {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}
 
 provider "aws" {
   access_key = var.aws_access_key
