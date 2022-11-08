@@ -45,7 +45,7 @@ resource "aws_route_table" "prod-public-crt" {
         gateway_id = "${aws_internet_gateway.prod-igw.id}" 
     }
     
-    tags {
+    tags = {
       "Name" : "prod-public-crt"
     }
 }
