@@ -1,5 +1,5 @@
 resource "aws_security_group" "web_ssh" {
-  name        = "ssh-access"
+  name        = "access"
   description = "open ssh traffic"
  
 
