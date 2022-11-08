@@ -11,7 +11,7 @@ provider "aws" {
 resource "aws_instance" "Hi_Kura" {
   ami = "ami-08c40ec9ead489470"
   instance_type = "t2.micro"
-  key_name = "kuradeploy.pem"
+  key_name = "kuradeploy"
   vpc_security_group_ids = [aws_security_group.web_ssh.id]
 
   user_data = "${file("deploy.sh")}"
