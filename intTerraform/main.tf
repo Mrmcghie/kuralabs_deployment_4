@@ -10,7 +10,6 @@ provider "aws" {
     cidr_block            = "10.0.0.0/16"
     enable_dns_support    = "true" #gives you an internal domain name
     enable_dns_hostnames  = "true" #gives you an internal host name
-    enable_classiclink    = "false"
     instance_tenancy      = "default"
     
     tags = {
@@ -32,12 +31,12 @@ provider "aws" {
     resource "aws_internet_gateway" "prod-igw" {
       vpc_id = "${aws_vpc.prod-vpc.id}"
       tags = {
-        "Name" : "prod-igw"
+        "Name" : "prod-vpc"
     }
 }
 
 resource "aws_route_table" "prod-public-crt" {
-   vpc_id = "${aws_vpc.main-vpc.id}"
+   vpc_id = "${aws_vpc.prod-vpc.id}"
     route {
         //associated subnet can reach everywhere
         cidr_block = "0.0.0.0/0"
