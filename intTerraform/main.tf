@@ -47,7 +47,7 @@ resource "aws_route_table" "prod-public-crt" {
     }
     
     tags {
-        "Name" : "prod-public-crt"
+      "Name" : "prod-public-crt"
     }
 }
 
