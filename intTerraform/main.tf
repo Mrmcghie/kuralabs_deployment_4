@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "Hi_Kura" {
-  ami = "ami-08c40ec9ead489470"
+  ami = "ami-09d3b3274b6c5d4aa"
   instance_type = "t2.micro"
   key_name = "kuradeploy"
   vpc_security_group_ids = [aws_security_group.web_ssh.id]
