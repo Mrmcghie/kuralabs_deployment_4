@@ -18,7 +18,7 @@ provider "aws" {
  }
 }
 
-  resource "aws_subnet” “prod-subnet-public-1” {
+  resource "aws_subnet" "prod-subnet-public-1" {
     vpc_id                  = "${aws_vpc.prod-vpc.id}"
     cidr_block              = "10.0.1.0/24"
     map_public_ip_on_launch = "true" //it makes this a public subnet
@@ -52,7 +52,7 @@ resource "aws_route_table" "prod-public-crt" {
 }
 
 resource "aws_route_table_association" "prod-crta-public-subnet-1"{
-    subnet_id = "${aws_subnet.prod-subnet-public-1.id}"
+   subnet_id = "${aws_subnet.prod-subnet-public-1.id}"
     route_table_id = "${aws_route_table.prod-public-crt.id}"
 }
  resource "aws_instance" "Webserver001" { 
