@@ -1,7 +1,8 @@
 resource "aws_security_group" "web_ssh" {
   name        = "access"
   description = "open ssh traffic"
- 
+  vpc_id      = "${aws_vpc.prod-vpc.id}"
+
 
   ingress {
     from_port = 22
