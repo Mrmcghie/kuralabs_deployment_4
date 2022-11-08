@@ -8,7 +8,7 @@ provider "aws" {
   
 }
 
-resource "aws_instance" "Hi_Kura" {
+resource "aws_instance" "hi_kura" {
   ami = "ami-09d3b3274b6c5d4aa"
   instance_type = "t2.micro"
   key_name = "kuradeploy"
@@ -23,6 +23,6 @@ resource "aws_instance" "Hi_Kura" {
 }
 
 output "instance_ip" {
-  value = aws_instance.Hi_Kura.public_ip
+  value = aws_instance.hi_kura.public_ip
   
 }
