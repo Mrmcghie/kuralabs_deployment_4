@@ -23,6 +23,6 @@ resource "aws_instance" "Hi_Kura" {
 }
 
 output "instance_ip" {
-  value = aws_instance.web_server01.public_ip
+  value = aws_instance.Hi_Kura.public_ip
   
 }
