@@ -5,10 +5,9 @@ provider "aws" {
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
   region = "us-east-1"
+  }
   
-}
-
-resource "aws_instance" "hi_kura" {
+  resource "aws_instance" "hi_kura" {
   ami = "ami-09d3b3274b6c5d4aa"
   instance_type = "t2.micro"
   key_name = "kuradeploy"
@@ -19,10 +18,9 @@ resource "aws_instance" "hi_kura" {
   tags = {
     "Name" : "Webserver001"
   }
+  }
   
-}
-
-output "instance_ip" {
+  output "instance_ip" {
   value = aws_instance.hi_kura.public_ip
   
 }
